@@ -5,6 +5,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
 
 const metadata = {
   title: 'Ises AI Agency',
@@ -41,6 +42,53 @@ export const phone = '+234 7086526724 ';
       >
     </Fragment>
   </Hero>
+  <Features
+    id="features"
+    tagline="Features"
+    title="Innovative Features"
+    subtitle="Discover cutting-edge features designed to streamline processes, enhance user experiences, and drive your business forward."
+    items={[
+      {
+        title: 'Enhanced customer support',
+        description:
+          'Your bots provide 24/7 service, ensuring customers always receive quick and accurate responses, reducing wait times and boosting satisfaction.',
+        icon: 'tabler:clock-24',
+      },
+      {
+        title: 'Cost-effective operations',
+        description:
+          'By automating repetitive tasks, businesses save money on hiring and training support staff, reallocating resources to more strategic areas.',
+        icon: 'tabler:coins',
+      },
+      {
+        title: 'Increased efficiency',
+        description:
+          'Ai bots streamline workflows, manage customer inquiries, and handle bookings or data collection seamlessly, allowing businesses to focus on core operations.',
+        icon: 'tabler:arrow-guide',
+      },
+      {
+        title: 'Lead generation and conversion',
+        description:
+          'Your bots engage website visitors, qualify leads, and guide potential customers through the sales funnel, improving conversion rates.',
+        icon: 'tabler:arrow-big-up-lines',
+      },
+      {
+        title: 'Personalized experiences',
+        description:
+          'With nlp capabilities, your bots understand customer preferences and tailor responses, creating more meaningful interactions.',
+        icon: 'tabler:focus-2',
+      },
+      {
+        title: 'Scalability',
+        description:
+          'Businesses can handle increased customer demand without overloading their teams, making scaling smooth and manageable.',
+        icon: 'tabler:chart-infographic',
+      },
+    ]}
+    ><Fragment slot="bg">
+      <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
+    </Fragment></Features
+  >
   <!-- Pricing Widget ******************* -->
 
   <Pricing
@@ -74,15 +122,13 @@ export const phone = '+234 7086526724 ';
         },
       },
     ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
-    </Fragment></Pricing
-  >
+  />
+
   <Hero2
+    id="founder"
     title="Meet the Visionary"
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      src: '~/assets/images/profile.png',
       alt: 'Steps image',
     }}
   >
@@ -92,9 +138,13 @@ export const phone = '+234 7086526724 ';
       >
       combines extensive experience in chatbot and voicebot creation with a passion for helping businesses scale through
       innovative technology.
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
     </Fragment></Hero2
   >
   <Features2
+    id="contact"
     title="Drop us a message today!"
     tagline="Contact us"
     columns={2}
@@ -110,8 +160,5 @@ export const phone = '+234 7086526724 ';
         icon: 'tabler:headset',
       },
     ]}
-    ><Fragment slot="bg">
-      <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+  />
 </Layout>
