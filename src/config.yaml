@@ -1,6 +1,6 @@
 site:
   name: Ises AI Agency
-  site: 'https://.vercel.app'
+  site: 'https://ises-aa.netlify.app/'
   base: '/'
   trailingSlash: false
 
